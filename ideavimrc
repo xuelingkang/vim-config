@@ -1,0 +1,28 @@
+source ~/.vimrc
+
+set keep-english-in-normal
+set clipboard+=ideaput
+
+Plug 'easymotion/vim-easymotion'
+set easymotion
+
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap Q :action CloseContent<CR>
+
+" 聚焦
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gp :action SelectInProjectView<CR>
+nnoremap <leader>b :action Back<CR>
+nnoremap <leader>f :action Forward<CR>
+
+" 重构
+vnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rf :action RenameFile<CR>
+nnoremap <leader>re :action RenameElement<CR>
+nnoremap <leader>rr :action ReformatCode<CR>
+vnoremap <leader>rr :action ReformatCode<CR>
