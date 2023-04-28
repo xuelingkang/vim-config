@@ -71,7 +71,7 @@ set ttimeoutlen=100
 autocmd InsertLeave * call InputMethodEn()
 
 " 清除搜索
-nnoremap <esc><esc> :let @/ = ""<return>
+nnoremap <esc><esc> :noh<return> :let @/ = ""<return>
 
 " NERDTree
 nnoremap <leader>nt :NERDTreeToggle<CR>
