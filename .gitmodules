@@ -16,3 +16,6 @@
 [submodule "dracula"]
 	path = pack/themes/start/dracula
 	url = https://github.com/dracula/vim.git
+[submodule "surround"]
+	path = pack/plugins/start/surround
+	url = https://tpope.io/vim/surround.git

@@ -1,7 +1,9 @@
 source ~/.vimrc
 
-set keep-english-in-normal
 set clipboard+=ideaput
+
+set surround
+set keep-english-in-normal
 
 Plug 'easymotion/vim-easymotion'
 set easymotion
