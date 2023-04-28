@@ -8,7 +8,6 @@ set easymotion
 
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
-nnoremap Q :action CloseContent<CR>
 
 " 聚焦
 nnoremap [[ :action MethodUp<CR>
