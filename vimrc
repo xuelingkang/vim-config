@@ -70,6 +70,9 @@ endfunction
 set ttimeoutlen=100
 autocmd InsertLeave * call InputMethodEn()
 
+" 搜索选中的文本
+vnoremap // y/<C-r>"<return>
+
 " 清除搜索
 nnoremap <esc><esc> :noh<return> :let @/ = ""<return>
 
