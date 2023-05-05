@@ -71,10 +71,10 @@ set ttimeoutlen=100
 autocmd InsertLeave * call InputMethodEn()
 
 " 搜索选中的文本
-vnoremap // y/<C-r>"<return>
+vnoremap // y/<C-r>"<CR>
 
 " 清除搜索
-nnoremap <esc><esc> :noh<return> :let @/ = ""<return>
+nnoremap <esc><esc> :noh<CR>:let @/ = ''<CR>
 
 " NERDTree
 nnoremap <leader>nt :NERDTreeToggle<CR>
