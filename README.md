@@ -4,4 +4,5 @@
 2. `mkdir ~/.vim`
 3. `ln -s ~/.vim-config/pack ~/.vim/pack`
 4. `ln -s ~/.vim-config/vimrc ~/.vimrc`
+5. `mkdir ~/.vim/.backup ~/.vim/.swp ~/.vim/.undo`
 
