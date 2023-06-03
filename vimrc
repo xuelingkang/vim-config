@@ -46,7 +46,7 @@ set directory=~/.vim/.swp//
 set undodir=~/.vim/.undo//
 set autochdir
 set noerrorbells
-set visualbell
+set novisualbell
 set history=1000
 set autoread
 " 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
