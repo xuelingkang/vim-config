@@ -17,6 +17,7 @@ nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gp :action SelectInProjectView<CR>
 nnoremap <leader>b :action Back<CR>
 nnoremap <leader>f :action Forward<CR>
+nnoremap <S-Space> :action GotoNextError<CR>
 
 " 重构
 vnoremap <leader>rm :action ExtractMethod<CR>
@@ -24,3 +25,7 @@ nnoremap <leader>rf :action RenameFile<CR>
 nnoremap <leader>re :action RenameElement<CR>
 nnoremap <leader>rr :action ReformatCode<CR>
 vnoremap <leader>rr :action ReformatCode<CR>
+
+" VCS
+nnoremap <leader>va :action Annotate<CR>
+nnoremap <leader>vh :action Vcs.ShowTabbedFileHistory<CR>
