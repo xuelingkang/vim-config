@@ -3,6 +3,8 @@ source ~/.vimrc
 set clipboard+=ideaput
 
 set surround
+set NERDTree
+set highlightedyank
 set keep-english-in-normal
 
 nnoremap \e :e ~/.ideavimrc<CR>
