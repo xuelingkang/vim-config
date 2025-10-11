@@ -87,3 +87,5 @@ let g:startify_bookmarks = [
         \ '~/.oh-my-zsh/custom/lazy/',
         \]
 
+map <silent> <F5> :let @+ = expand('%:p')<CR>
+
