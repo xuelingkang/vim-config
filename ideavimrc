@@ -1,4 +1,4 @@
-source ~/.vimrc
+source ~/.commonvimrc
 
 set clipboard+=ideaput
 
@@ -31,3 +31,4 @@ vnoremap <leader>rr :action ReformatCode<CR>
 " VCS
 nnoremap <leader>va :action Annotate<CR>
 nnoremap <leader>vh :action Vcs.ShowTabbedFileHistory<CR>
+
