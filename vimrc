@@ -4,7 +4,7 @@ source ~/.commonvimrc
 function! InputMethodEn()
     if has('mac')
         let l:a = system("InputSourceSelector select com.apple.keylayout.ABC")
-    elseif has('linux')
+    elseif has('linux') && executable('fcitx5-remote')
         let l:a = system("fcitx5-remote -c")
     endif
 endfunction
