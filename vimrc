@@ -11,3 +11,14 @@ endfunction
 set ttimeoutlen=100
 autocmd InsertLeave * call InputMethodEn()
 
+
+" WSL Windows 剪贴板同步（y/p 直接走 Windows 剪贴板）
+if has("unix") && filereadable("/proc/version")
+  let s:wsl_check = readfile("/proc/version")
+  if join(s:wsl_check) =~ "Microsoft"
+    autocmd TextYankPost * if v:event.operator == 'y' | call system('~/.local/bin/wsl-copy', join(v:event.regcontents, "\n")) | endif
+    nnoremap p :let @" = substitute(system('~/.local/bin/wsl-paste'), '\r', '', 'g')<CR>p
+    nnoremap P :let @" = substitute(system('~/.local/bin/wsl-paste'), '\r', '', 'g')<CR>P
+  endif
+endif
+
