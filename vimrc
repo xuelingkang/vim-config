@@ -4,8 +4,16 @@ source ~/.commonvimrc
 function! InputMethodEn()
     if has('mac')
         let l:a = system("InputSourceSelector select com.apple.keylayout.ABC")
-    elseif has('linux') && executable('fcitx5-remote')
-        let l:a = system("fcitx5-remote -c")
+    elseif has('linux')
+        " WSL: 通过 weasel-mode 切换小狼毫到英文
+        if join(readfile("/proc/version")) =~ "Microsoft"
+            let s:weasel = expand("~/.vim-config/wsl-bin/weasel-mode")
+            if executable(s:weasel)
+                let l:a = system(s:weasel . " ascii")
+            endif
+        elseif executable('fcitx5-remote')
+            let l:a = system("fcitx5-remote -c")
+        endif
     endif
 endfunction
 set ttimeoutlen=100
