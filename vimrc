@@ -3,7 +3,7 @@ source ~/.commonvimrc
 " 退出编辑模式自动切换为英文输入法
 function! InputMethodEn()
     if has('mac')
-        let l:a = system("InputSourceSelector select com.apple.keylayout.ABC")
+        let l:a = system(expand("~/.vim-config/mac-bin/macism com.apple.keylayout.ABC"))
     elseif has('linux')
         " WSL: 通过 weasel-mode 切换小狼毫到英文
         if join(readfile("/proc/version")) =~ "Microsoft"

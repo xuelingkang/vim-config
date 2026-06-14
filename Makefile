@@ -1,0 +1,13 @@
+.PHONY: macism
+
+# Build macism (macOS only)
+macism:
+	@case "$$(uname -s)" in \
+		Darwin) \
+			mkdir -p mac-bin && \
+			$(MAKE) -C macism && \
+			cp macism/macism mac-bin/ && \
+			echo "macism: built -> mac-bin/macism" ;; \
+		*) \
+			echo "macism: skipping (not macOS)" ;; \
+	esac
