@@ -6,7 +6,7 @@ all:
 		Darwin) \
 			mkdir -p mac-bin && \
 			$(MAKE) -C macism && \
-			cp macism/macism mac-bin/ && \
+			mv macism/macism mac-bin/ && \
 			echo "macism: built -> mac-bin/macism" ;; \
 		*) \
 			echo "macism: skipping (not macOS)" ;; \
