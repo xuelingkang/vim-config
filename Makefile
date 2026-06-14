@@ -1,7 +1,7 @@
-.PHONY: macism
+.PHONY: all
 
 # Build macism (macOS only)
-macism:
+all:
 	@case "$$(uname -s)" in \
 		Darwin) \
 			mkdir -p mac-bin && \

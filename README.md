@@ -12,7 +12,7 @@ ln -s ~/.vim-config/ideavimrc ~/.ideavimrc
 mkdir -p ~/.vim/{.backup,.swp,.undo}
 
 # macOS: build macism (input source switcher)
-make -C ~/.vim-config macism
+make -C ~/.vim-config
 ```
 
 ## Input method auto-switch
