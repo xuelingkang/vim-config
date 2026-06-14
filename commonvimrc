@@ -63,7 +63,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 vnoremap // y/<C-r>"<CR>
 
 " 清除搜索
-nnoremap <esc><esc> :noh<CR>:let @/ = ''<CR>
+nnoremap <C-L> :noh<CR>:let @/ = '\%^\%$'<CR>
 
 " NERDTree
 nnoremap <leader>nt :NERDTreeToggle<CR>
