@@ -25,9 +25,6 @@
 [submodule "wsl-bin"]
 	path = wsl-bin
 	url = https://github.com/xuelingkang/wsl-bin.git
-[submodule "macism"]
-	path = macism
-	url = https://github.com/laishulu/macism.git
 [submodule "mac-bin"]
 	path = mac-bin
 	url = git@github.com:xuelingkang/mac-bin.git
