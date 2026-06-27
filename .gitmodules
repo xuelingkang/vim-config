@@ -27,4 +27,4 @@
 	url = https://github.com/xuelingkang/wsl-bin.git
 [submodule "mac-bin"]
 	path = mac-bin
-	url = git@github.com:xuelingkang/mac-bin.git
+	url = https://github.com/xuelingkang/mac-bin.git
