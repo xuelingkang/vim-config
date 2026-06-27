@@ -22,6 +22,29 @@ Switch to English input method on `InsertLeave`, adapted per platform:
 | WSL      | `weasel-mode` (submodule) | `wsl-bin/weasel-mode ascii` |
 | Linux    | `fcitx5-remote` | `fcitx5-remote -c` |
 
+### Vim
+
+`vimrc` defines `InputAscii()`, called via `autocmd InsertLeave *`.
+
+### Tmux
+
+`pane-focus-in` hook calls `bin/input-ascii` directly.
+
+### IdeaVim
+
+`ideavimrc` uses `autocmd InsertLeave * :action Tool_External Tools_InputAscii` to trigger an IntelliJ External Tool, avoiding shell command output.
+
+**Setup:** IntelliJ → Settings → Tools → External Tools → add:
+
+| Field | Value |
+|-------|-------|
+| Name | `InputAscii` |
+| Program | `$USER_HOME$/.vim-config/bin/input-ascii` |
+| Arguments | (empty) |
+| Open console | ❌ unchecked |
+
+The wrapper script `bin/input-ascii` dispatches per platform and is shared by tmux and the External Tool.
+
 ## WSL clipboard
 
 Bypass X11 and interact with the Windows clipboard directly via `wsl-bin/wsl-copy` / `wsl-paste`, avoiding CRLF `^M` corruption.

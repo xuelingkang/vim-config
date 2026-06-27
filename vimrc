@@ -1,7 +1,7 @@
 source ~/.commonvimrc
 
 " 退出编辑模式自动切换为英文输入法
-function! InputMethodEn()
+function! InputAscii()
     if has('mac')
         let l:a = system(expand("~/.vim-config/mac-bin/squirrel-mode ascii"))
     elseif has('linux')
@@ -17,7 +17,7 @@ function! InputMethodEn()
     endif
 endfunction
 set ttimeoutlen=100
-autocmd InsertLeave * call InputMethodEn()
+autocmd InsertLeave * call InputAscii()
 
 " WSL 剪贴板：直通 wsl-copy/wsl-paste，不走 X11（绕开 CRLF ^M 问题）
 if has("unix") && filereadable("/proc/version")

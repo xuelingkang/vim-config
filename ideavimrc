@@ -5,7 +5,8 @@ set clipboard+=ideaput
 set surround
 set NERDTree
 set highlightedyank
-set keep-english-in-normal
+" 离开 Insert 模式时切输入法到英文（External Tool，无声）
+autocmd InsertLeave * :action Tool_External Tools_InputAscii
 
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>

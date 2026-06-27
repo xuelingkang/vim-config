@@ -1,0 +1,21 @@
+#!/bin/bash
+# Switch input method to ASCII/English mode (cross-platform)
+# Mirrors vimrc's InputMethodEn() — called by tmux/ideavim autocmd
+#
+# Usage: input-ascii
+
+set -euo pipefail
+
+case "$(uname -s)" in
+  Darwin)
+    exec "$HOME/.vim-config/mac-bin/squirrel-mode" ascii
+    ;;
+  Linux)
+    if grep -qi Microsoft /proc/version 2>/dev/null; then
+      # WSL — 切小狼毫到英文
+      exec "$HOME/.vim-config/wsl-bin/weasel-mode" ascii
+    elif command -v fcitx5-remote &>/dev/null; then
+      exec fcitx5-remote -c
+    fi
+    ;;
+esac
